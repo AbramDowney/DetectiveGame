@@ -14,11 +14,11 @@ public class Playermovement : MonoBehaviour
     void FixedUpdate()
     {
         if(Input.GetKey("w")){
-            playerRB.AddForce(0, 0, forwardSpeed * Time.deltaTime);
+            playerRB.AddForce(transform.forward * forwardSpeed * Time.deltaTime);
         }
 
         if(Input.GetKey("s")){
-            playerRB.AddForce(0, 0, -forwardSpeed * Time.deltaTime);
+            playerRB.AddForce(-transform.forward * forwardSpeed * Time.deltaTime);
         }
 
         if(Input.GetKey("d")){
